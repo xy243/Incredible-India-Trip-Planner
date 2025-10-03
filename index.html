@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible India Trip Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Incredible India</div>
+        <div class="nav-links">
+            <button class="nav-btn active" data-tab="home">Home</button>
+            <button class="nav-btn" data-tab="explore">Explore</button>
+            <button class="nav-btn" data-tab="trips">My Trips</button>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="home-tab">
+        <div class="hero-section">
+            <div class="slideshow-container">
+                <div class="slide active"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Incredible India Trip Planner</h1>
+                <p class="hero-subtitle">Discover the magic of India's diverse destinations</p>
+                <div class="search-container">
+                    <input type="text" id="home-search" class="search-input" placeholder="Search your dream destination...">
+                    <button id="home-search-btn" class="search-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="popular-section">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destinations-grid" id="popular-destinations">
+                <div class="destination-card" data-city="Delhi">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Delhi</h3>
+                        <p>Historic capital with Mughal grandeur</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Mumbai">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Mumbai</h3>
+                        <p>City of dreams and Bollywood</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Jaipur">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1599661046289-e31897846e41?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Jaipur</h3>
+                        <p>The Pink City of royal heritage</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Goa">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Goa</h3>
+                        <p>Beach paradise with Portuguese charm</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Kerala">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Kerala</h3>
+                        <p>God's own country with backwaters</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Ladakh">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Ladakh</h3>
+                        <p>Land of high passes and monasteries</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Varanasi">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Varanasi</h3>
+                        <p>Spiritual heart of India</p>
+                    </div>
+                </div>
+                <div class="destination-card" data-city="Manali">
+                    <div class="dest-image" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=500&h=400&fit=crop')"></div>
+                    <div class="dest-info">
+                        <h3>Manali</h3>
+                        <p>Himalayan haven for adventurers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="tab-content hidden" id="explore-tab">
+        <div class="explore-container">
+            <div class="explore-header">
+                <h2>Explore Destinations</h2>
+                <div class="search-container">
+                    <input type="text" id="explore-search" class="search-input" placeholder="Enter destination name...">
+                    <button id="explore-search-btn" class="search-btn">Search</button>
+                </div>
+            </div>
+            <div id="explore-results" class="explore-results"></div>
+        </div>
+    </div>
+
+    <div class="tab-content hidden" id="trips-tab">
+        <div class="trips-container">
+            <h2>My Saved Trips</h2>
+            <div id="saved-trips" class="saved-trips-grid"></div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
